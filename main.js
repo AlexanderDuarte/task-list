@@ -5,6 +5,8 @@ const filter = document.getElementById("filter-category");
 const audioAddTask = new Audio("./audios/add-task.wav");
 const audioTaskRemove = new Audio("./audios/remove-task.wav");
 const audioWarning = new Audio("./audios/warning.wav");
+const audioCheck = new Audio("./audios/check.wav")
+
 
 
 const list = JSON.parse(localStorage.getItem("localList")) || [];
@@ -87,6 +89,7 @@ function createElementTask({ id, task, category, ischecked }) {
 }
 
 function toggleCheck(task) {
+  
   list.forEach((taskItem) => {
     if (taskItem.id === task.id) {
       taskItem.ischecked = !taskItem.ischecked;
@@ -94,6 +97,7 @@ function toggleCheck(task) {
       toggleElementCheck(task);
     }
   });
+  
   updateLocalStorage();
 }
 
@@ -105,6 +109,7 @@ function toggleElementCheck(task) {
   } else {
     taskText.style.textDecoration = "none";
   }
+  audioCheck.play()
 }
 
 function handleFilter(e) {
