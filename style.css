@@ -48,6 +48,20 @@
     padding: 0;
 }
 
+#sound-btn{
+    cursor: pointer;
+    font-size: larger;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border: solid 2px white;
+    border-radius: 30px;
+}
+
+
 h1 {
     padding: 40px;
     animation: anim-all-down 0.3s ease forwards;

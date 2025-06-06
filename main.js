@@ -1,17 +1,22 @@
 const form = document.getElementById("task-form");
 const taskList = document.getElementById("task-list");
 const filter = document.getElementById("filter-category");
+const soundBtn = document.getElementById("sound-btn")
 
 const audioAddTask = new Audio("./audios/add-task.wav");
 const audioTaskRemove = new Audio("./audios/remove-task.wav");
 const audioWarning = new Audio("./audios/warning.wav");
 const audioCheck = new Audio("./audios/check.wav")
 
+let isSoundOn = true
+
 
 
 const list = JSON.parse(localStorage.getItem("localList")) || [];
 
 if (list) list.forEach((item) => taskList.appendChild(createElementTask(item)));
+
+soundBtn.addEventListener("click", soundControl)
 
 form.addEventListener("submit", addTask);
 taskList.addEventListener("click", (e) => {
@@ -44,7 +49,7 @@ function addTask(e) {
   };
   list.push(task);
   taskList.appendChild(createElementTask(task));
-  audioAddTask.play();
+  isSoundOn && audioAddTask.play();
 
   updateLocalStorage();
 
@@ -60,7 +65,7 @@ function RemoveTask(e) {
   for (let i = 0; i < list.length; i++) {
     if (list[i].id === taskItem.id) {
       list.splice(i, 1);
-      audioTaskRemove.play();
+      isSoundOn && audioTaskRemove.play();
       break;
     }
   }
@@ -109,7 +114,7 @@ function toggleElementCheck(task) {
   } else {
     taskText.style.textDecoration = "none";
   }
-  audioCheck.play()
+  isSoundOn && audioCheck.play()
 }
 
 function handleFilter(e) {
@@ -127,6 +132,18 @@ function handleFilter(e) {
       item.style.display = "none";
     }
   });
+}
+
+
+function soundControl(){
+  if(isSoundOn){
+    isSoundOn = false
+    soundBtn.innerHTML = "&#128263;"
+  }else{
+    isSoundOn = true
+    soundBtn.innerHTML = "&#x1F508;"
+
+  }
 }
 
 // Developed by AlexanderDuarte (https://github.com/AlexanderDuarte)
