@@ -1,3 +1,6 @@
+📖 Este README está em português. Para a versão em inglês, [clique aqui](README.en.md).  
+🇬🇧 This README is in Portuguese. For the English version, [click here](README.en.md).
+
 # 📝 Task List App
 
 Uma aplicação simples de lista de tarefas com categorias e filtro, desenvolvida com HTML, CSS e JavaScript.
