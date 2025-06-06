@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <h1>Tasks List</h1>
+    <form id="task-form">
+      <input id="task-input" placeholder="Digite a tarefa..."  autocomplete="off"/>
+      <select id="category-select">
+        <option value="Trabalho">Trabalho</option>
+        <option value="Pessoal">Pessoal</option>
+        <option value="Estudo">Estudo</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <div class="tasks-container">
+      <div class="filter-container">
+        <label for="filter-category">Filtrar por: </label
+        ><select id="filter-category">
+          <option value="Todos">Todos</option>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Estudo">Estudo</option>
+        </select>
+      </div>
+
+      <ul id="task-list">
+        
+      </ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+<!-- Developed by AlexanderDuarte (https://github.com/AlexanderDuarte) -->
