@@ -41,7 +41,7 @@ Uma aplicação simples de lista de tarefas com categorias e filtro, desenvolvid
 
 ### 1. Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/task-list-app.git
+git clone https://github.com/AlexanderDuarte/task-list.git
 ```
 
 ### 2. Abra o index.html no seu navegador.
@@ -54,9 +54,9 @@ Não é necessário instalar dependências. Tudo funciona com arquivos estático
 
 - Implementar modo escuro/tema customizável
 
-- Adicionar datas ou horários às tarefas
+- Adicionar prazos ou datas de vencimento às tarefas
 
-- Possibilidade de editar uma tarefa
+- Editar uma tarefa existente
 
-- Aceito sugestôes de melhorias 😉
+- Aceito sugestões de melhorias 😉
     
